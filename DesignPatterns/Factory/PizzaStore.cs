@@ -27,6 +27,8 @@ namespace DesignPatterns.Factory
             return _pizza;
         }
 
+        // Factory method that will be overridden by the subclass to provide
+        // individual implementations
         protected abstract AbsPizza CreatePizza(string type);
     }
 
