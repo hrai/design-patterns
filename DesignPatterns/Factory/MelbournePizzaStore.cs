@@ -20,47 +20,4 @@ namespace DesignPatterns.Factory
             return _pizza;
         }
     }
-
-    public class MelbIngredientFactory:IIngredientFactory
-    {
-        public IDough CreateDough()
-        {
-            return new ThickDough();
-        }
-
-        public ISauce CreateSauce()
-        {
-            return new BbqSauce();
-        }
-
-        public IMeat CreateMeat()
-        {
-            return new PorkMeat();
-        }
-
-        public IVeggie CreateVeggie()
-        {
-            return new Capsicum();
-        }
-    }
-
-    public class ThickDough : IDough
-    {
-        public string Name() { return this.GetType().FullName; }
-    }
-
-    public class BbqSauce : ISauce
-    {
-        public string Name() { return this.GetType().FullName; }
-    }
-
-    public class PorkMeat : IMeat
-    {
-        public string Name() { return this.GetType().FullName; }
-    }
-
-    public class Capsicum : IVeggie
-    {
-        public string Name() { return this.GetType().FullName; }
-    }
 }
