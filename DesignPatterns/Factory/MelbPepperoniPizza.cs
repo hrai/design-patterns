@@ -1,4 +1,5 @@
 ﻿using System;
+using DesignPatterns.Factory.AbstractIngredientFactory;
 
 namespace DesignPatterns.Factory
 {
@@ -8,6 +9,10 @@ namespace DesignPatterns.Factory
         {
             Name = "Melb pepperoni Pizza";
             Console.WriteLine($"Preparing {Name}...");
+        }
+
+        public MelbPepperoniPizza(IIngredientFactory ingredientFactory) : base(ingredientFactory)
+        {
         }
     }
 }

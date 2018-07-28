@@ -1,7 +1,10 @@
-﻿namespace DesignPatterns.Factory
+﻿using DesignPatterns.Factory.AbstractIngredientFactory;
+
+namespace DesignPatterns.Factory
 {
     public abstract class AbstractPizza
     {
+        public IIngredientFactory IngredientFactory;
         public string Name;
 
         public abstract void Prepare();

@@ -6,7 +6,7 @@
         {
             if (type == "Veggie")
             {
-                _pizza = new SydneyVeggiePizza();
+                _pizza = new SydneyVeggiePizza(new MelbIngredientFactory());
             }
 
             return _pizza;
