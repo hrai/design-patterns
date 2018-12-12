@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Iterator
 {
@@ -7,16 +8,14 @@ namespace Iterator
         static void Main(string[] args)
         {
             var dinnerMenu = new DinnerMenu();
-            var iterator = dinnerMenu.CreateIterator();
-            printMenuItems(iterator);
-        }
+            var lunchMenu = new LunchMenu();
 
-        private static void printMenuItems(IIterator iterator)
-        {
-            while(iterator.hasNext())
-            {
-                Console.WriteLine(iterator.next().Name);
-            }
+            var menuIterators = new List<IEnumerator<Dish>>();
+            menuIterators.Add(dinnerMenu.CreateIterator());
+            menuIterators.Add(lunchMenu.CreateIterator());
+
+            var waitress = new Waitress(menuIterators);
+            waitress.printMenuItems();
         }
     }
 }

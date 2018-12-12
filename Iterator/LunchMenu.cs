@@ -1,27 +1,30 @@
 using System;
+using System.Collections.Generic;
 
 namespace Iterator
 {
     public class LunchMenu
     {
-        private ArrayList<Dish> menuItems;
+        private IList<Dish> menuItems;
 
         public LunchMenu()
         {
-            Console.WriteLine("Creating lunch menu");
-            menuItems = new ArrayList<Dish>();
+            Console.WriteLine("Creating lunch menu...");
+            menuItems = new List<Dish>();
 
-            CreateMenuItem(0, "Fish curry");
-            CreateMenuItem(1, "Hotpot");
+            CreateMenuItem(0, "Momo");
+            CreateMenuItem(1, "Pad thai");
+
+            Console.WriteLine("Lunch menu created...");
         }
 
         public void CreateMenuItem(int pos, string name) {
             menuItems.Add(new Dish(name));
         }
 
-        public IIterator CreateIterator()
+        public IEnumerator<Dish> CreateIterator()
         {
-            return menuItems.iterator();
+            return menuItems.GetEnumerator();
         }
     }
 }
