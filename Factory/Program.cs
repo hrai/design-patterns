@@ -2,7 +2,7 @@
 
 namespace DesignPatterns.Factory
 {
-    public class FactoryClient
+    public class Program
     {
         public static void Main(string[] args)
         {
