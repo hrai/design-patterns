@@ -13,6 +13,8 @@ namespace DesignPatterns.Builder
                .BuildDessert("mousse");
 
            var meal = mealBuilder.GetMeal();
+
+           Console.WriteLine("Running builder pattern code...");
            Console.WriteLine(((Meal)meal).Entree);
            Console.WriteLine(((Meal)meal).Mains);
            Console.WriteLine(((Meal)meal).Dessert);
