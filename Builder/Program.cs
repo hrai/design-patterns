@@ -14,6 +14,8 @@ namespace DesignPatterns.Builder
 
            var meal = mealBuilder.GetMeal();
            Console.WriteLine(((Meal)meal).Entree);
+           Console.WriteLine(((Meal)meal).Mains);
+           Console.WriteLine(((Meal)meal).Dessert);
         }
     }
 }
