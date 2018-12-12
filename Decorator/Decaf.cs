@@ -6,7 +6,7 @@ namespace DesignPatterns.Decorator
 {
     public class Decaf : Beverage
     {
-        public string Desc => $"base.Desc {typeof(Decaf)}";
+        public override string Desc => $"base.Desc {typeof(Decaf)}";
 
         public override double GetCost()
         {

@@ -8,7 +8,7 @@ namespace DesignPatterns.Decorator
     {
         private Beverage _beverage;
 
-        public string Desc => $"{base.Desc} {nameof(Mocha)}";
+        public override string Desc => $"{base.Desc} {nameof(Mocha)}";
 
         public Mocha(Beverage beverage)
         {

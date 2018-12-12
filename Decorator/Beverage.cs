@@ -6,7 +6,7 @@ namespace DesignPatterns.Decorator
 {
     public abstract class Beverage
     {
-        public string Desc { get; }
+        public virtual string Desc { get; }
 
         public abstract double GetCost();
     }
