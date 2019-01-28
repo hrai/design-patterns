@@ -29,7 +29,16 @@ namespace State
 
         public void DispenseGumball()
         {
-            Console.WriteLine("Dispensing gumball...");
+            /* Console.WriteLine("Dispensing gumball..."); */
+            Console.WriteLine("Rolling gumball out of machine");
+
+            if(_machine.Gumballs() > 0)
+            {
+                _machine.ResetBall();
+                _machine.SetState(_machine.GetNoQuarter());
+            }else{
+            _machine.SetState(_machine.GetOutOfGumballs());
+            }
         }
     }
 }

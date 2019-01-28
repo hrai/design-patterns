@@ -6,9 +6,10 @@ namespace State
         private IState HasQuarter;
         private IState OutOfGumballs;
         private IState GumballSold;
+        private IState Winner;
 
         private IState _state;
-        private readonly int _noOfGumballs;
+        private int _noOfGumballs;
 
         public GumballMachine(int noOfGumballs)
         {
@@ -16,7 +17,8 @@ namespace State
             HasQuarter = new HasQuarter(this);
             OutOfGumballs = new OutOfGumballs(this);
             GumballSold = new GumballSold(this);
-            
+            Winner = new Winner(this);
+
             _state = this.NoQuarter;
             _noOfGumballs = noOfGumballs;
 
@@ -25,11 +27,6 @@ namespace State
         public void SetState(IState state)
         {
             _state = state;
-        }
-
-        public void DispenseGumball()
-        {
-            _state.DispenseGumball();
         }
 
         public void EjectQuarter()
@@ -45,6 +42,7 @@ namespace State
         public void TurnCrank()
         {
             _state.TurnCrank();
+            _state.DispenseGumball();
         }
 
         public IState GetHasQuarter()
@@ -70,6 +68,16 @@ namespace State
         public int Gumballs()
         {
             return _noOfGumballs;
+        }
+
+        public IState GetWinner()
+        {
+            return Winner;
+        }
+
+        public void ResetBall()
+        {
+            _noOfGumballs--;
         }
     }
 }

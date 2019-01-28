@@ -24,20 +24,29 @@ namespace State
 
         public void TurnCrank()
         {
-            _machine.SetState(_machine.GetGumballSold());
-            Console.WriteLine("gumball sold");
-
-            DispenseGumball();
+            if(IsWinner())
+            {
+                Console.WriteLine("Congrats you're the winner");
+                _machine.SetState(_machine.GetWinner());
+            }
+            else
+            {
+                Console.WriteLine("gumball sold");
+                _machine.SetState(_machine.GetGumballSold());
+            }
         }
 
         public void DispenseGumball()
         {
-            Console.WriteLine("Rolling gumball out of machine");
+            Console.WriteLine("Dispensing not allowed");
+        }
 
-            if(_machine.Gumballs() > 0)
-                _machine.SetState(_machine.GetNoQuarter());
+        private bool IsWinner()
+        {
+            var random = new Random();
+            var chance = random.Next(1, 10);
 
-            _machine.SetState(_machine.GetOutOfGumballs());
+            return chance == 1;
         }
     }
 }

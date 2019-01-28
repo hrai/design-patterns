@@ -6,11 +6,13 @@ namespace State
         void InsertQuarter();
         void EjectQuarter();
         void TurnCrank();
-        void DispenseGumball();
+        void ResetBall();
+        /* void DispenseGumball(); */
         IState GetOutOfGumballs();
         IState GetGumballSold();
         IState GetNoQuarter();
         IState GetHasQuarter();
+        IState GetWinner();
         int Gumballs();
     }
 }
