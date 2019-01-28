@@ -22,6 +22,10 @@ namespace State
             gumballMachine.TurnCrank();
             gumballMachine.InsertQuarter();
             gumballMachine.TurnCrank();
+            gumballMachine.InsertQuarter();
+            gumballMachine.TurnCrank();
+
+            System.Console.WriteLine(gumballMachine.ToString());
         }
     }
 }

@@ -79,5 +79,10 @@ namespace State
         {
             _noOfGumballs--;
         }
+
+        public override string ToString()
+        {
+            return "Total gumballs left in the machine : " + _noOfGumballs;
+        }
     }
 }
