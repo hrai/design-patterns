@@ -26,6 +26,9 @@ namespace State
             gumballMachine.TurnCrank();
 
             System.Console.WriteLine(gumballMachine.ToString());
+
+            gumballMachine.Refill(10);
+            System.Console.WriteLine(gumballMachine.ToString());
         }
     }
 }

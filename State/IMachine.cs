@@ -7,6 +7,7 @@ namespace State
         void EjectQuarter();
         void TurnCrank();
         void ResetBall();
+        void Refill(int balls);
         /* void DispenseGumball(); */
         IState GetOutOfGumballs();
         IState GetGumballSold();
