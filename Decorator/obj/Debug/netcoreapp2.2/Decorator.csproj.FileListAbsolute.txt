@@ -1,0 +1,11 @@
+/home/funkenn/design-patterns/Decorator/obj/Debug/netcoreapp2.2/Decorator.csprojAssemblyReference.cache
+/home/funkenn/design-patterns/Decorator/obj/Debug/netcoreapp2.2/Decorator.csproj.CoreCompileInputs.cache
+/home/funkenn/design-patterns/Decorator/obj/Debug/netcoreapp2.2/Decorator.AssemblyInfoInputs.cache
+/home/funkenn/design-patterns/Decorator/obj/Debug/netcoreapp2.2/Decorator.AssemblyInfo.cs
+/home/funkenn/design-patterns/Decorator/bin/Debug/netcoreapp2.2/Decorator.deps.json
+/home/funkenn/design-patterns/Decorator/bin/Debug/netcoreapp2.2/Decorator.runtimeconfig.json
+/home/funkenn/design-patterns/Decorator/bin/Debug/netcoreapp2.2/Decorator.runtimeconfig.dev.json
+/home/funkenn/design-patterns/Decorator/bin/Debug/netcoreapp2.2/Decorator.dll
+/home/funkenn/design-patterns/Decorator/bin/Debug/netcoreapp2.2/Decorator.pdb
+/home/funkenn/design-patterns/Decorator/obj/Debug/netcoreapp2.2/Decorator.dll
+/home/funkenn/design-patterns/Decorator/obj/Debug/netcoreapp2.2/Decorator.pdb

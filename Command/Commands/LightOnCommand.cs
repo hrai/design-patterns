@@ -2,7 +2,7 @@
 
 namespace Command
 {
-    class LightOnCommand
+    public class LightOnCommand:ICommand
     {
         private Light _light;
 
