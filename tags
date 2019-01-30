@@ -2631,7 +2631,9 @@ Builder/1.0.0	Builder/bin/Debug/netcoreapp2.2/Builder.deps.json	/^    "Builder\/
 ButtonPressed	Command/SimpleRemoteControl.cs	/^        public void ButtonPressed()$/;"	m	class:Command.SimpleRemoteControl
 Capsicum	Factory/AbstractIngredientFactory/Ingredients/Capsicum.cs	/^    public class Capsicum : IVeggie$/;"	c	namespace:DesignPatterns.Factory.AbstractIngredientFactory.Ingredients
 ChickenMeat	Factory/AbstractIngredientFactory/Ingredients/ChickenMeat.cs	/^    public class ChickenMeat : IMeat$/;"	c	namespace:DesignPatterns.Factory.AbstractIngredientFactory.Ingredients
+Command	Command/Commands/GarageDoorCommand.cs	/^namespace Command$/;"	n
 Command	Command/Commands/LightOnCommand.cs	/^namespace Command$/;"	n
+Command	Command/GarageDoor.cs	/^namespace Command$/;"	n
 Command	Command/ICommand.cs	/^namespace Command$/;"	n
 Command	Command/Light.cs	/^namespace Command$/;"	n
 Command	Command/Program.cs	/^namespace Command$/;"	n
@@ -2734,6 +2736,7 @@ DispenseGumball	State/States/Winner.cs	/^        public void DispenseGumball()$/
 Dispose	Iterator/DinnerEnumerator.cs	/^        protected virtual void Dispose(bool disposing)$/;"	m	class:Iterator.DinnerEnumerator
 Dispose	Iterator/DinnerEnumerator.cs	/^        public void Dispose()$/;"	m	class:Iterator.DinnerEnumerator
 Dough	Factory/Pizza.cs	/^        public IDough Dough;$/;"	f	class:DesignPatterns.Factory.Pizza
+Down	Command/GarageDoor.cs	/^        public void Down()$/;"	m	class:Command.GarageDoor
 Drinks	Builder/Meal.cs	/^        public string Drinks { get; set; }$/;"	p	class:DesignPatterns.Builder.Meal
 EjectQuarter	State/GumballMachine.cs	/^        public void EjectQuarter()$/;"	m	class:State.GumballMachine
 EjectQuarter	State/IMachine.cs	/^        void EjectQuarter();$/;"	m	interface:State.IMachine
@@ -2745,6 +2748,7 @@ EjectQuarter	State/States/OutOfGumballs.cs	/^        public void EjectQuarter()$
 EjectQuarter	State/States/Winner.cs	/^        public void EjectQuarter()$/;"	m	class:State.Winner
 Entree	Builder/Meal.cs	/^        public string Entree { get; set; }$/;"	p	class:DesignPatterns.Builder.Meal
 Espresso	Decorator/Espresso.cs	/^    public class Espresso: Beverage$/;"	c	namespace:DesignPatterns.Decorator
+Execute	Command/Commands/GarageDoorCommand.cs	/^        public void Execute()$/;"	m	class:Command.GarageDoorCommand
 Execute	Command/Commands/LightOnCommand.cs	/^        public void Execute()$/;"	m	class:Command.LightOnCommand
 Execute	Command/ICommand.cs	/^        void Execute();$/;"	m	interface:Command.ICommand
 ExtensionName	Builder/obj/Debug/netcoreapp2.2/project.razor.json	/^        "ExtensionName": "UnsupportedRazorExtension"$/;"	s	object:Configuration.Extensions.0
@@ -2762,6 +2766,9 @@ Extensions	State/obj/Debug/netcoreapp2.2/project.razor.json	/^    "Extensions": 
 Factory.dll	Factory/bin/Debug/netcoreapp2.2/Factory.deps.json	/^          "Factory.dll": {}$/;"	o	object:targets..NETCoreApp,Version=v2.2.Factory/1.0.0.runtime
 Factory/1.0.0	Factory/bin/Debug/netcoreapp2.2/Factory.deps.json	/^      "Factory\/1.0.0": {$/;"	o	object:targets..NETCoreApp,Version=v2.2
 Factory/1.0.0	Factory/bin/Debug/netcoreapp2.2/Factory.deps.json	/^    "Factory\/1.0.0": {$/;"	o	object:libraries
+GarageDoor	Command/GarageDoor.cs	/^    public class GarageDoor$/;"	c	namespace:Command
+GarageDoorCommand	Command/Commands/GarageDoorCommand.cs	/^        public GarageDoorCommand(GarageDoor garageDoor)$/;"	m	class:Command.GarageDoorCommand
+GarageDoorCommand	Command/Commands/GarageDoorCommand.cs	/^    public class GarageDoorCommand:ICommand$/;"	c	namespace:Command
 GetCost	Decorator/Beverage.cs	/^        public abstract double GetCost();$/;"	m	class:DesignPatterns.Decorator.Beverage
 GetCost	Decorator/Decaf.cs	/^        public override double GetCost()$/;"	m	class:DesignPatterns.Decorator.Decaf
 GetCost	Decorator/Espresso.cs	/^        public override double GetCost()$/;"	m	class:DesignPatterns.Decorator.Espresso
@@ -2829,6 +2836,8 @@ LanguageVersion	Factory/obj/Debug/netcoreapp2.2/project.razor.json	/^    "Langua
 LanguageVersion	Iterator/obj/Debug/netcoreapp2.2/project.razor.json	/^    "LanguageVersion": "1.0",$/;"	s	object:Configuration
 LanguageVersion	State/obj/Debug/netcoreapp2.2/project.razor.json	/^    "LanguageVersion": "1.0",$/;"	s	object:Configuration
 Light	Command/Light.cs	/^    internal class Light$/;"	c	namespace:Command
+LightOff	Command/GarageDoor.cs	/^        public void LightOff()$/;"	m	class:Command.GarageDoor
+LightOn	Command/GarageDoor.cs	/^        public void LightOn()$/;"	m	class:Command.GarageDoor
 LightOnCommand	Command/Commands/LightOnCommand.cs	/^        public LightOnCommand(Light light)$/;"	m	class:Command.LightOnCommand
 LightOnCommand	Command/Commands/LightOnCommand.cs	/^    public class LightOnCommand:ICommand$/;"	c	namespace:Command
 LunchMenu	Iterator/LunchMenu.cs	/^        public LunchMenu()$/;"	m	class:Iterator.LunchMenu
@@ -3049,6 +3058,7 @@ State	State/States/Winner.cs	/^namespace State$/;"	n
 State.dll	State/bin/Debug/netcoreapp2.2/State.deps.json	/^          "State.dll": {}$/;"	o	object:targets..NETCoreApp,Version=v2.2.State/1.0.0.runtime
 State/1.0.0	State/bin/Debug/netcoreapp2.2/State.deps.json	/^      "State\/1.0.0": {$/;"	o	object:targets..NETCoreApp,Version=v2.2
 State/1.0.0	State/bin/Debug/netcoreapp2.2/State.deps.json	/^    "State\/1.0.0": {$/;"	o	object:libraries
+Stop	Command/GarageDoor.cs	/^        public void Stop()$/;"	m	class:Command.GarageDoor
 SydIngredientFactory	Factory/AbstractIngredientFactory/SydIngredientFactory.cs	/^    public class SydIngredientFactory : IIngredientFactory$/;"	c	namespace:DesignPatterns.Factory.AbstractIngredientFactory
 SydneyPizzaStore	Factory/SydneyPizzaStore.cs	/^    public class SydneyPizzaStore : PizzaStore$/;"	c	namespace:DesignPatterns.Factory
 SydneyVeggiePizza	Factory/SydneyVeggiePizza.cs	/^        public SydneyVeggiePizza(IIngredientFactory ingredientFactory) : base(ingredientFactory)$/;"	m	class:DesignPatterns.Factory.SydneyVeggiePizza
@@ -3077,6 +3087,7 @@ TurnCrank	State/States/HasQuarter.cs	/^        public void TurnCrank()$/;"	m	cla
 TurnCrank	State/States/NoQuarter.cs	/^        public void TurnCrank()$/;"	m	class:State.NoQuarter
 TurnCrank	State/States/OutOfGumballs.cs	/^        public void TurnCrank()$/;"	m	class:State.OutOfGumballs
 TurnCrank	State/States/Winner.cs	/^        public void TurnCrank()$/;"	m	class:State.Winner
+Up	Command/GarageDoor.cs	/^        public void Up()$/;"	m	class:Command.GarageDoor
 Veggie	Factory/Pizza.cs	/^        public IVeggie Veggie;$/;"	f	class:DesignPatterns.Factory.Pizza
 Waitress	Iterator/Waitress.cs	/^        public Waitress(List<IEnumerator<Dish>> menuIterators)$/;"	m	class:Iterator.Waitress
 Waitress	Iterator/Waitress.cs	/^    internal class Waitress$/;"	c	namespace:Iterator
@@ -3087,6 +3098,7 @@ Winner	State/States/Winner.cs	/^        public Winner(IMachine machine)$/;"	m	cl
 Winner	State/States/Winner.cs	/^    public class Winner: IState$/;"	c	namespace:State
 _beverage	Decorator/Mocha.cs	/^        private Beverage _beverage;$/;"	f	class:DesignPatterns.Decorator.Mocha	file:
 _beverage	Decorator/Whip.cs	/^        private Beverage _beverage;$/;"	f	class:DesignPatterns.Decorator.Whip	file:
+_garageDoor	Command/Commands/GarageDoorCommand.cs	/^        private GarageDoor _garageDoor;$/;"	f	class:Command.GarageDoorCommand	file:
 _light	Command/Commands/LightOnCommand.cs	/^        private Light _light;$/;"	f	class:Command.LightOnCommand	file:
 _machine	State/States/GumballSold.cs	/^        private IMachine _machine;$/;"	f	class:State.GumballSold	file:
 _machine	State/States/HasQuarter.cs	/^        private IMachine _machine;$/;"	f	class:State.HasQuarter	file:
