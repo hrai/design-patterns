@@ -1,6 +1,12 @@
+using System;
+
 namespace Command
 {
-    internal class Light
+    public class Light
     {
+        public void On()
+        {
+            System.Console.WriteLine("Light turned on");
+        }
     }
 }

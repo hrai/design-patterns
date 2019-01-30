@@ -2631,7 +2631,9 @@ Builder/1.0.0	Builder/bin/Debug/netcoreapp2.2/Builder.deps.json	/^    "Builder\/
 ButtonPressed	Command/SimpleRemoteControl.cs	/^        public void ButtonPressed()$/;"	m	class:Command.SimpleRemoteControl
 Capsicum	Factory/AbstractIngredientFactory/Ingredients/Capsicum.cs	/^    public class Capsicum : IVeggie$/;"	c	namespace:DesignPatterns.Factory.AbstractIngredientFactory.Ingredients
 ChickenMeat	Factory/AbstractIngredientFactory/Ingredients/ChickenMeat.cs	/^    public class ChickenMeat : IMeat$/;"	c	namespace:DesignPatterns.Factory.AbstractIngredientFactory.Ingredients
-Command	Command/LightOnCommand.cs	/^namespace Command$/;"	n
+Command	Command/Commands/LightOnCommand.cs	/^namespace Command$/;"	n
+Command	Command/ICommand.cs	/^namespace Command$/;"	n
+Command	Command/Light.cs	/^namespace Command$/;"	n
 Command	Command/Program.cs	/^namespace Command$/;"	n
 Command	Command/SimpleRemoteControl.cs	/^namespace Command$/;"	n
 CondimentDecorator	Decorator/CondimentDecorator.cs	/^    public abstract class CondimentDecorator : Beverage$/;"	c	namespace:DesignPatterns.Decorator
@@ -2743,7 +2745,8 @@ EjectQuarter	State/States/OutOfGumballs.cs	/^        public void EjectQuarter()$
 EjectQuarter	State/States/Winner.cs	/^        public void EjectQuarter()$/;"	m	class:State.Winner
 Entree	Builder/Meal.cs	/^        public string Entree { get; set; }$/;"	p	class:DesignPatterns.Builder.Meal
 Espresso	Decorator/Espresso.cs	/^    public class Espresso: Beverage$/;"	c	namespace:DesignPatterns.Decorator
-Execute	Command/LightOnCommand.cs	/^        public void Execute()$/;"	m	class:Command.LightOnCommand
+Execute	Command/Commands/LightOnCommand.cs	/^        public void Execute()$/;"	m	class:Command.LightOnCommand
+Execute	Command/ICommand.cs	/^        void Execute();$/;"	m	interface:Command.ICommand
 ExtensionName	Builder/obj/Debug/netcoreapp2.2/project.razor.json	/^        "ExtensionName": "UnsupportedRazorExtension"$/;"	s	object:Configuration.Extensions.0
 ExtensionName	Command/obj/Debug/netcoreapp2.2/project.razor.json	/^        "ExtensionName": "UnsupportedRazorExtension"$/;"	s	object:Configuration.Extensions.0
 ExtensionName	Decorator/obj/Debug/netcoreapp2.2/project.razor.json	/^        "ExtensionName": "UnsupportedRazorExtension"$/;"	s	object:Configuration.Extensions.0
@@ -2788,6 +2791,7 @@ HasQuarter	State/GumballMachine.cs	/^        private IState HasQuarter;$/;"	f	cl
 HasQuarter	State/States/HasQuarter.cs	/^        public HasQuarter(IMachine machine)$/;"	m	class:State.HasQuarter
 HasQuarter	State/States/HasQuarter.cs	/^    public class HasQuarter: IState$/;"	c	namespace:State
 HouseBlend	Decorator/HouseBlend.cs	/^    public class HouseBlend : Beverage$/;"	c	namespace:DesignPatterns.Decorator
+ICommand	Command/ICommand.cs	/^    public interface ICommand$/;"	i	namespace:Command
 IDisposable.Dispose	Iterator/DinnerEnumerator.cs	/^        void IDisposable.Dispose() { }$/;"	m	class:Iterator.DinnerEnumerator	file:
 IDough	Factory/AbstractIngredientFactory/Ingredients/Interfaces/IDough.cs	/^    public interface IDough$/;"	i	namespace:DesignPatterns.Factory.AbstractIngredientFactory
 IEnumerator.Current	Iterator/DinnerEnumerator.cs	/^        object IEnumerator.Current$/;"	p	class:Iterator.DinnerEnumerator
@@ -2824,8 +2828,9 @@ LanguageVersion	Decorator/obj/Debug/netcoreapp2.2/project.razor.json	/^    "Lang
 LanguageVersion	Factory/obj/Debug/netcoreapp2.2/project.razor.json	/^    "LanguageVersion": "1.0",$/;"	s	object:Configuration
 LanguageVersion	Iterator/obj/Debug/netcoreapp2.2/project.razor.json	/^    "LanguageVersion": "1.0",$/;"	s	object:Configuration
 LanguageVersion	State/obj/Debug/netcoreapp2.2/project.razor.json	/^    "LanguageVersion": "1.0",$/;"	s	object:Configuration
-LightOnCommand	Command/LightOnCommand.cs	/^        public LightOnCommand(Light light)$/;"	m	class:Command.LightOnCommand
-LightOnCommand	Command/LightOnCommand.cs	/^    public class LightOnCommand:ICommand$/;"	c	namespace:Command
+Light	Command/Light.cs	/^    internal class Light$/;"	c	namespace:Command
+LightOnCommand	Command/Commands/LightOnCommand.cs	/^        public LightOnCommand(Light light)$/;"	m	class:Command.LightOnCommand
+LightOnCommand	Command/Commands/LightOnCommand.cs	/^    public class LightOnCommand:ICommand$/;"	c	namespace:Command
 LunchMenu	Iterator/LunchMenu.cs	/^        public LunchMenu()$/;"	m	class:Iterator.LunchMenu
 LunchMenu	Iterator/LunchMenu.cs	/^    public class LunchMenu$/;"	c	namespace:Iterator
 Main	Builder/Program.cs	/^        public static void Main(string[] args)$/;"	m	class:DesignPatterns.Builder.Program
@@ -3082,7 +3087,7 @@ Winner	State/States/Winner.cs	/^        public Winner(IMachine machine)$/;"	m	cl
 Winner	State/States/Winner.cs	/^    public class Winner: IState$/;"	c	namespace:State
 _beverage	Decorator/Mocha.cs	/^        private Beverage _beverage;$/;"	f	class:DesignPatterns.Decorator.Mocha	file:
 _beverage	Decorator/Whip.cs	/^        private Beverage _beverage;$/;"	f	class:DesignPatterns.Decorator.Whip	file:
-_light	Command/LightOnCommand.cs	/^        private Light _light;$/;"	f	class:Command.LightOnCommand	file:
+_light	Command/Commands/LightOnCommand.cs	/^        private Light _light;$/;"	f	class:Command.LightOnCommand	file:
 _machine	State/States/GumballSold.cs	/^        private IMachine _machine;$/;"	f	class:State.GumballSold	file:
 _machine	State/States/HasQuarter.cs	/^        private IMachine _machine;$/;"	f	class:State.HasQuarter	file:
 _machine	State/States/NoQuarter.cs	/^        private IMachine _machine;$/;"	f	class:State.NoQuarter	file:

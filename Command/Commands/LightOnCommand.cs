@@ -13,7 +13,7 @@ namespace Command
 
         public void Execute()
         {
-            _light.on();
+            _light.On();
         }
     }
 }
