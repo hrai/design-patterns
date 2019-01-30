@@ -11,9 +11,15 @@ namespace Command
             var remote =new SimpleRemoteControl();
 
             var light = new Light();
-            var cmd = new LightOnCommand(light);
-            remote.SetCommand(cmd);
+            var lightOnCommand = new LightOnCommand(light);
 
+            var garageDoor = new GarageDoor();
+            var garageDoorCommand = new GarageDoorCommand(garageDoor);
+
+            remote.SetCommand(lightOnCommand);
+            remote.ButtonPressed();
+
+            remote.SetCommand(garageDoorCommand);
             remote.ButtonPressed();
         }
     }
