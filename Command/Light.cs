@@ -8,5 +8,10 @@ namespace Command
         {
             System.Console.WriteLine("Light turned on");
         }
+
+        public void Off()
+        {
+            System.Console.WriteLine("Light turned off");
+        }
     }
 }

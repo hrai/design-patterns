@@ -19,15 +19,15 @@ namespace Command
 
         }
 
-        public void LightOn()
+        public void Open()
         {
             System.Console.WriteLine("GarageDoor is open");
 
         }
 
-        public void LightOff()
+        public void Close()
         {
-
+            System.Console.WriteLine("GarageDoor is close");
         }
     }
 }

@@ -13,14 +13,22 @@ namespace Command
             var light = new Light();
             var lightOnCommand = new LightOnCommand(light);
 
+            var lightOffCommand = new LightOffCommand(light);
+
             var garageDoor = new GarageDoor();
-            var garageDoorCommand = new GarageDoorCommand(garageDoor);
+            var garageDoorCommand = new GarageDoorOpenCommand(garageDoor);
 
-            remote.SetCommand(lightOnCommand);
-            remote.ButtonPressed();
+            // remote.SetCommand(lightOnCommand);
+            // remote.ButtonPressed();
 
-            remote.SetCommand(garageDoorCommand);
-            remote.ButtonPressed();
+            // remote.SetCommand(garageDoorCommand);
+            // remote.ButtonPressed();
+
+            /* */
+
+
+            remote.SetCommand(0, lightOnCommand, lightOffCommand);
+            remote.OnButtonPressed(0);
         }
     }
 }

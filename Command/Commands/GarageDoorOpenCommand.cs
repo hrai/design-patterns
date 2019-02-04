@@ -2,18 +2,18 @@
 
 namespace Command
 {
-    public class GarageDoorCommand:ICommand
+    public class GarageDoorOpenCommand:ICommand
     {
         private GarageDoor _garageDoor;
 
-        public GarageDoorCommand(GarageDoor garageDoor)
+        public GarageDoorOpenCommand(GarageDoor garageDoor)
         {
             _garageDoor = garageDoor;
         }
 
         public void Execute()
         {
-            _garageDoor.LightOn();
+            _garageDoor.Open();
         }
     }
 }
