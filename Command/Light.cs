@@ -4,14 +4,20 @@ namespace Command
 {
     public class Light
     {
+        private readonly string name;
+
+        public Light(string name)
+        {
+            this.name = name;
+        }
         public void On()
         {
-            System.Console.WriteLine("Light turned on");
+            System.Console.WriteLine($"{name} Light turned on");
         }
 
         public void Off()
         {
-            System.Console.WriteLine("Light turned off");
+            System.Console.WriteLine($"{name} Light turned off");
         }
     }
 }
