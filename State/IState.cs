@@ -7,6 +7,5 @@ namespace State
         void TurnCrank();
         void DispenseGumball();
         
-
     }
 }
