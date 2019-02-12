@@ -88,7 +88,7 @@ namespace State
         public void Refill(int balls)
         {
             System.Console.WriteLine($"Refilling with {balls} balls");
-            
+
             _noOfGumballs += balls;
             _state = NoQuarter;
         }

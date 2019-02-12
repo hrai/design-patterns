@@ -17,7 +17,6 @@ namespace Command
         public void SetVolume(int vol)
         {
             System.Console.WriteLine("Volume set to " + vol);
-
         }
 
         public void SetCD()

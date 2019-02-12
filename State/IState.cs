@@ -6,6 +6,5 @@ namespace State
         void EjectQuarter();
         void TurnCrank();
         void DispenseGumball();
-        
     }
 }

@@ -14,6 +14,7 @@ namespace State
         IState GetNoQuarter();
         IState GetHasQuarter();
         IState GetWinner();
+
         int Gumballs();
     }
 }

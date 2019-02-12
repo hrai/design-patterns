@@ -16,7 +16,6 @@ namespace Command
                 onCommands[i] = new NoCommand();
                 offCommands[i] = new NoCommand();
             }
-
         }
 
         public void SetCommand(int slot, ICommand onCommand, ICommand offCommand)
