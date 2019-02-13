@@ -11,34 +11,39 @@ namespace Command
         private readonly int LOW = 1;
         private readonly int OFF = 0;
 
-        private int speed = 0;
+        private int _speed = 0;
 
         public CeilingFan(string name)
         {
             this.name = name;
         }
 
+        public void Speed()
+        {
+            return _speed;
+        }
+
         public void High()
         {
-            speed = HIGH;
+            _speed = HIGH;
             System.Console.WriteLine($"{name} CeilingFan turned high");
         }
 
         public void Medium()
         {
-            speed = MEDIUM;
+            _speed = MEDIUM;
             System.Console.WriteLine($"{name} CeilingFan turned medium");
         }
 
         public void Low()
         {
-            speed = LOW;
+            _speed = LOW;
             System.Console.WriteLine($"{name} CeilingFan turned low");
         }
 
         public void Off()
         {
-            speed = OFF;
+            _speed = OFF;
             System.Console.WriteLine($"{name} CeilingFan turned off");
         }
     }
