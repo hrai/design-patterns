@@ -18,7 +18,7 @@ namespace Command
             this.name = name;
         }
 
-        public void Speed()
+        public int Speed()
         {
             return _speed;
         }
