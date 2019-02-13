@@ -6,10 +6,10 @@ namespace Command
     {
         private readonly string name;
 
-        private readonly int High = 3;
-        private readonly int Medium = 2;
-        private readonly int Low = 1;
-        private readonly int Off = 0;
+        private readonly int HIGH = 3;
+        private readonly int MEDIUM = 2;
+        private readonly int LOW = 1;
+        private readonly int OFF = 0;
 
         private int speed = 0;
 
@@ -20,25 +20,25 @@ namespace Command
 
         public void High()
         {
-            speed = High;
+            speed = HIGH;
             System.Console.WriteLine($"{name} CeilingFan turned high");
         }
 
         public void Medium()
         {
-            speed = Medium;
+            speed = MEDIUM;
             System.Console.WriteLine($"{name} CeilingFan turned medium");
         }
 
         public void Low()
         {
-            speed = Low;
+            speed = LOW;
             System.Console.WriteLine($"{name} CeilingFan turned low");
         }
 
         public void Off()
         {
-            speed = Off;
+            speed = OFF;
             System.Console.WriteLine($"{name} CeilingFan turned off");
         }
     }

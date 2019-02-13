@@ -2,18 +2,40 @@
 
 namespace Command
 {
-    public class CeilingFanOnCommand:ICommand
+    public class CeilingFanHighCommand:ICommand
     {
         private CeilingFan _ceilingFan;
+        private int _oldSpeed;
 
-        public CeilingFanOnCommand(CeilingFan ceilingFan)
+        public CeilingFanHighCommand(CeilingFan ceilingFan)
         {
             _ceilingFan = ceilingFan;
         }
 
         public void Execute()
         {
-            _ceilingFan.On();
+            _oldSpeed = _ceilingFan.GetSpeed();
+            _ceilingFan.High();
+        }
+
+        public void Undo()
+        {
+            if (_oldSpeed == HIGH)
+            {
+                _ceilingFan.High();
+            }
+            else if (_oldSpeed == MEDIUM)
+            {
+                _ceilingFan.Medium();
+            }
+            else if (_oldSpeed == LOW)
+            {
+                _ceilingFan.Low();
+            }
+            else if (_oldSpeed == Off)
+            {
+                _ceilingFan.Off();
+            }
         }
     }
 }
