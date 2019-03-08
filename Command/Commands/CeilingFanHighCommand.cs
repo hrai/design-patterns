@@ -20,19 +20,19 @@ namespace Command
 
         public void Undo()
         {
-            if (_oldSpeed == HIGH)
+            if (_oldSpeed == Constants.HIGH)
             {
                 _ceilingFan.High();
             }
-            else if (_oldSpeed == MEDIUM)
+            else if (_oldSpeed == Constants.MEDIUM)
             {
                 _ceilingFan.Medium();
             }
-            else if (_oldSpeed == LOW)
+            else if (_oldSpeed == Constants.LOW)
             {
                 _ceilingFan.Low();
             }
-            else if (_oldSpeed == Off)
+            else if (_oldSpeed == Constants.Off)
             {
                 _ceilingFan.Off();
             }
