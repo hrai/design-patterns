@@ -32,7 +32,7 @@ namespace Command
             {
                 _ceilingFan.Low();
             }
-            else if (_oldSpeed == Constants.Off)
+            else if (_oldSpeed == Constants.OFF)
             {
                 _ceilingFan.Off();
             }

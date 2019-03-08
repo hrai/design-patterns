@@ -5,6 +5,7 @@ namespace Command
         // private int slot;
         public ICommand[] onCommands { get; set; }
         public ICommand[] offCommands { get; set; }
+        private ICommand lastCommand;
 
         public SimpleRemoteControl()
         {
@@ -26,12 +27,19 @@ namespace Command
 
         public void OnButtonPressed(int slot)
         {
-            onCommands[slot].Execute();
+            lastCommand = onCommands[slot];
+            lastCommand.Execute();
         }
 
         public void OffButtonPressed(int slot)
         {
-            offCommands[slot].Execute();
+            lastCommand = offCommands[slot];
+            lastCommand.Execute();
+        }
+
+        public void UndoButtonPressed()
+        {
+            lastCommand.Undo();
         }
     }
 }

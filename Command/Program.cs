@@ -40,6 +40,7 @@ namespace Command
             remote.OffButtonPressed(2);
             remote.OnButtonPressed(3);
             remote.OffButtonPressed(3);
+            remote.UndoButtonPressed();
         }
     }
 }
