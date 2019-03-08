@@ -27,10 +27,17 @@ namespace Command
             var stereoOnWithCDCommand  = new StereoOnWithCDCommand(stereo);
             var stereoOffCommand  = new StereoOffCommand(stereo);
 
+            var ceilingFan=new CeilingFan("Ceiling fan");
+            var ceilingFanHighCommand = new CeilingFanHighCommand(ceilingFan);
+            var ceilingFanLowCommand = new CeilingFanLowCommand(ceilingFan);
+            var ceilingFanOffCommand = new CeilingFanOffCommand(ceilingFan);
+
             remote.SetCommand(0, lightOnCommand, lightOffCommand);
             remote.SetCommand(1, kitLightOnCommand, kitLightOffCommand);
             remote.SetCommand(2, garageDoorOpenCommand, garageDoorCloseCommand);
             remote.SetCommand(3, stereoOnWithCDCommand, stereoOffCommand);
+            remote.SetCommand(4, ceilingFanHighCommand, ceilingFanOffCommand);
+            remote.SetCommand(5, ceilingFanLowCommand, ceilingFanOffCommand);
 
             remote.OnButtonPressed(0);
             remote.OffButtonPressed(0);
@@ -40,6 +47,11 @@ namespace Command
             remote.OffButtonPressed(2);
             remote.OnButtonPressed(3);
             remote.OffButtonPressed(3);
+            remote.OnButtonPressed(4);
+            remote.OffButtonPressed(4);
+            remote.UndoButtonPressed();
+            remote.OnButtonPressed(5);
+            remote.OffButtonPressed(5);
             remote.UndoButtonPressed();
         }
     }
