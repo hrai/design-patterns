@@ -17,5 +17,10 @@ namespace Command
             _stereo.SetCD();
             _stereo.SetVolume(11);
         }
+
+        public void Undo()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

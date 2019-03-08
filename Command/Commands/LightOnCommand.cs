@@ -15,5 +15,10 @@ namespace Command
         {
             _light.On();
         }
+
+        public void Undo()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

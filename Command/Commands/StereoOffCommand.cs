@@ -15,5 +15,10 @@ namespace Command
         {
             _stereo.Off();
         }
+
+        public void Undo()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

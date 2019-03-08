@@ -6,6 +6,10 @@ namespace Command
     {
         private GarageDoor _garageDoor;
 
+        public GarageDoorCloseCommand()
+        {
+        }
+
         public GarageDoorCloseCommand(GarageDoor garageDoor)
         {
             _garageDoor = garageDoor;
@@ -14,6 +18,11 @@ namespace Command
         public void Execute()
         {
             _garageDoor.Close();
+        }
+
+        public void Undo()
+        {
+            throw new NotImplementedException();
         }
     }
 }
