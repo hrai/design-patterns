@@ -19,17 +19,20 @@ namespace CompoundPatterns
         {
             Console.WriteLine("Simulating quacking...");
 
-            var mallardDuck = new MallardDuck();
-            var redheadDuck = new RedheadDuck();
-            var duckCall = new DuckCall();
-            var rubberDuck = new RubberDuck();
-            var gooseDuck = new GooseAdapter(new Goose());
+            var mallardDuck = new QuackCounter(new MallardDuck());
+            var redheadDuck = new QuackCounter(new RedheadDuck());
+            var duckCall = new QuackCounter(new DuckCall());
+            var rubberDuck = new QuackCounter(new RubberDuck());
+            var gooseDuck = new QuackCounter(new GooseAdapter(new Goose()));
 
             Simulate(mallardDuck);
             Simulate(redheadDuck);
             Simulate(duckCall);
             Simulate(rubberDuck);
             Simulate(gooseDuck);
+
+            var quacks = QuackCounter.GetQuacks();
+            Console.WriteLine($"Total quacks = {quacks}");
         }
 
         private void Simulate(IQuackable duck)
