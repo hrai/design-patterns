@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CompoundPatterns
 {
@@ -30,19 +31,23 @@ namespace CompoundPatterns
 
             var gooseDuck = new GooseAdapter(new Goose());
 
-            Simulate(_countingDuckFactory.CreateMallardDuck());
-            Simulate(_countingDuckFactory.CreateRedheadDuck());
-            Simulate(_countingDuckFactory.CreateDuckCall());
-            Simulate(_countingDuckFactory.CreateRubberDuck());
-            Simulate(gooseDuck);
+            IList<IQuackable> quackers = new List<IQuackable>();
+            quackers.Add(_countingDuckFactory.CreateMallardDuck());
+            quackers.Add(_countingDuckFactory.CreateRedheadDuck());
+            quackers.Add(_countingDuckFactory.CreateDuckCall());
+            quackers.Add(_countingDuckFactory.CreateRubberDuck());
+            quackers.Add(gooseDuck);
+
+            var flock = new Flock(quackers);
+            Simulate(flock);
 
             var quacks = QuackCounter.GetQuacks();
             Console.WriteLine($"Total quacks = {quacks}");
         }
 
-        private void Simulate(IQuackable duck)
+        private void Simulate(IQuackable quackable)
         {
-            duck.Quack();
+            quackable.Quack();
         }
     }
 }
