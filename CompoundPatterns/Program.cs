@@ -23,7 +23,7 @@ namespace CompoundPatterns
             var redheadDuck = new QuackCounter(new RedheadDuck());
             var duckCall = new QuackCounter(new DuckCall());
             var rubberDuck = new QuackCounter(new RubberDuck());
-            var gooseDuck = new QuackCounter(new GooseAdapter(new Goose()));
+            var gooseDuck = new GooseAdapter(new Goose());
 
             Simulate(mallardDuck);
             Simulate(redheadDuck);
