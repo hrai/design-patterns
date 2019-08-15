@@ -6,7 +6,9 @@ namespace CompoundPatterns
     {
         static void Main(string[] args)
         {
-            var sim = new DuckSimulator();
+            var factory = new CountingDuckFactory();
+            var sim = new DuckSimulator(factory);
+
             sim.Simulate();
 
             Console.ReadKey();
@@ -15,20 +17,23 @@ namespace CompoundPatterns
 
     internal class DuckSimulator
     {
+        private readonly CountingDuckFactory _countingDuckFactory;
+
+        public DuckSimulator(CountingDuckFactory countingDuckFactory)
+        {
+            _countingDuckFactory = countingDuckFactory;
+        }
+
         internal void Simulate()
         {
             Console.WriteLine("Simulating quacking...");
 
-            var mallardDuck = new QuackCounter(new MallardDuck());
-            var redheadDuck = new QuackCounter(new RedheadDuck());
-            var duckCall = new QuackCounter(new DuckCall());
-            var rubberDuck = new QuackCounter(new RubberDuck());
             var gooseDuck = new GooseAdapter(new Goose());
 
-            Simulate(mallardDuck);
-            Simulate(redheadDuck);
-            Simulate(duckCall);
-            Simulate(rubberDuck);
+            Simulate(_countingDuckFactory.CreateMallardDuck());
+            Simulate(_countingDuckFactory.CreateRedheadDuck());
+            Simulate(_countingDuckFactory.CreateDuckCall());
+            Simulate(_countingDuckFactory.CreateRubberDuck());
             Simulate(gooseDuck);
 
             var quacks = QuackCounter.GetQuacks();
