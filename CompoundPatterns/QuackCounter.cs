@@ -17,8 +17,6 @@ namespace CompoundPatterns
         {
             _duck.Quack();
             _totalQuacks++;
-
-            OnSomethingHappened(this, EventArgs.Empty);
         }
 
         public static int GetQuacks()

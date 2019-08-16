@@ -39,19 +39,21 @@ namespace CompoundPatterns
             quackers.Add(_countingDuckFactory.CreateRubberDuck());
             quackers.Add(gooseDuck);
 
-            AttachEventHandlers(mallardDuck);
+            var quackologist = new Quackologist();
+            AttachEventHandlers(quackologist, mallardDuck);
 
             var flock = new Flock(quackers);
+            AttachEventHandlers(quackologist, flock);
+
             Simulate(flock);
 
             var quacks = QuackCounter.GetQuacks();
             Console.WriteLine($"Total quacks = {quacks}");
         }
 
-        private static void AttachEventHandlers(Quackable mallardDuck)
+        private static void AttachEventHandlers(Quackologist quackologist, Quackable quackable)
         {
-            var quackologist = new Quackologist();
-            mallardDuck.SomethingHappened += quackologist.HandleEvent;
+            quackable.SomethingHappened += quackologist.HandleEvent;
         }
 
         private void Simulate(Quackable quackable)

@@ -9,7 +9,7 @@ namespace CompoundPatterns
         protected virtual void OnSomethingHappened(object sender, EventArgs args)
         {
             var handler = SomethingHappened;
-            handler?.Invoke(this, EventArgs.Empty);
+            handler?.Invoke(sender, EventArgs.Empty);
         }
 
         internal abstract void Quack();

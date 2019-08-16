@@ -6,7 +6,7 @@ namespace CompoundPatterns
     {
         public void HandleEvent(object sender, EventArgs args)
         {
-            Console.WriteLine($"{(sender as Quackable)?.GetType()?.Name}'s Quack was invoked.");
+            Console.WriteLine($"{(sender as Quackable)?.GetType().Name}'s Quack was invoked.");
         }
     }
 }

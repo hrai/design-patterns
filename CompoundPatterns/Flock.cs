@@ -6,7 +6,6 @@ using System.Text;
 namespace CompoundPatterns
 {
     class Flock : Quackable
-
     {
         private readonly IList<Quackable> _quackers;
 
@@ -17,7 +16,12 @@ namespace CompoundPatterns
 
         internal override void Quack()
         {
-            _quackers.ToList().ForEach(quacker => quacker.Quack());
+            _quackers.ToList().ForEach(quacker =>
+            {
+                quacker.Quack();
+
+                OnSomethingHappened(quacker, EventArgs.Empty);
+            });
         }
     }
 }
