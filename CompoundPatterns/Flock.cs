@@ -20,7 +20,7 @@ namespace CompoundPatterns
             {
                 quacker.Quack();
 
-                OnSomethingHappened(quacker, EventArgs.Empty);
+                OnQuacked(quacker, EventArgs.Empty);
             });
         }
     }

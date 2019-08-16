@@ -6,7 +6,7 @@ namespace CompoundPatterns
     {
         public event EventHandler SomethingHappened;
 
-        protected virtual void OnSomethingHappened(object sender, EventArgs args)
+        protected virtual void OnQuacked(object sender, EventArgs args)
         {
             var handler = SomethingHappened;
             handler?.Invoke(sender, EventArgs.Empty);
