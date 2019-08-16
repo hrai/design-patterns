@@ -4,16 +4,16 @@ using System.Text;
 
 namespace CompoundPatterns
 {
-    class GooseAdapter : IQuackable
+    internal class GooseAdapter : Quackable
     {
-        private Goose _goose;
+        private readonly Goose _goose;
 
         public GooseAdapter(Goose goose)
         {
             _goose = goose;
         }
 
-        public void Quack()
+        internal override void Quack()
         {
             _goose.Honk();
         }

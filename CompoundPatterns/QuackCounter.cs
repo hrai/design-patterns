@@ -1,20 +1,24 @@
-﻿namespace CompoundPatterns
+﻿using System;
+
+namespace CompoundPatterns
 {
-    internal class QuackCounter : IQuackable
+    internal class QuackCounter : Quackable
     {
-        private readonly IQuackable _duck;
+        private readonly Quackable _duck;
         private static int _totalQuacks;
 
-        public QuackCounter(IQuackable duck)
+        public QuackCounter(Quackable duck)
         {
             _duck = duck;
             _totalQuacks = 0;
         }
 
-        public void Quack()
+        internal override void Quack()
         {
             _duck.Quack();
             _totalQuacks++;
+
+            OnSomethingHappened(this, EventArgs.Empty);
         }
 
         public static int GetQuacks()

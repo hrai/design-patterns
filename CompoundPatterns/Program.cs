@@ -31,12 +31,15 @@ namespace CompoundPatterns
 
             var gooseDuck = new GooseAdapter(new Goose());
 
-            IList<IQuackable> quackers = new List<IQuackable>();
-            quackers.Add(_countingDuckFactory.CreateMallardDuck());
+            IList<Quackable> quackers = new List<Quackable>();
+            var mallardDuck = _countingDuckFactory.CreateMallardDuck();
+            quackers.Add(mallardDuck);
             quackers.Add(_countingDuckFactory.CreateRedheadDuck());
             quackers.Add(_countingDuckFactory.CreateDuckCall());
             quackers.Add(_countingDuckFactory.CreateRubberDuck());
             quackers.Add(gooseDuck);
+
+            AttachEventHandlers(mallardDuck);
 
             var flock = new Flock(quackers);
             Simulate(flock);
@@ -45,7 +48,13 @@ namespace CompoundPatterns
             Console.WriteLine($"Total quacks = {quacks}");
         }
 
-        private void Simulate(IQuackable quackable)
+        private static void AttachEventHandlers(Quackable mallardDuck)
+        {
+            var quackologist = new Quackologist();
+            mallardDuck.SomethingHappened += quackologist.HandleEvent;
+        }
+
+        private void Simulate(Quackable quackable)
         {
             quackable.Quack();
         }

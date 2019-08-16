@@ -2,9 +2,9 @@ using System;
 
 namespace CompoundPatterns
 {
-    public class RubberDuck : IQuackable
+    internal class RubberDuck : Quackable
     {
-        public void Quack()
+        internal override void Quack()
         {
             Console.WriteLine("Squeak");
         }

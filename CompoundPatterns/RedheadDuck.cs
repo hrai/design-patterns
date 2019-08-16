@@ -2,9 +2,9 @@ using System;
 
 namespace CompoundPatterns
 {
-    public class RedheadDuck : IQuackable
+    internal class RedheadDuck : Quackable
     {
-        public void Quack()
+        internal override void Quack()
         {
             Console.WriteLine("Quack");
         }

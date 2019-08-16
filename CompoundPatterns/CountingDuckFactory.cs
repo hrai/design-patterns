@@ -2,25 +2,25 @@
 {
     internal class CountingDuckFactory : AbstractDuckFactory
     {
-        internal override IQuackable CreateMallardDuck()
+        internal override Quackable CreateMallardDuck()
         {
             var mallardDuck = new QuackCounter(new MallardDuck());
             return mallardDuck;
         }
 
-        internal override IQuackable CreateRedheadDuck()
+        internal override Quackable CreateRedheadDuck()
         {
             var redheadDuck = new QuackCounter(new RedheadDuck());
             return redheadDuck;
         }
 
-        internal override IQuackable CreateDuckCall()
+        internal override Quackable CreateDuckCall()
         {
             var duckCall = new QuackCounter(new DuckCall());
             return duckCall;
         }
 
-        internal override IQuackable CreateRubberDuck()
+        internal override Quackable CreateRubberDuck()
         {
             var rubberDuck = new QuackCounter(new RubberDuck());
             return rubberDuck;

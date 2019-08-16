@@ -5,17 +5,17 @@ using System.Text;
 
 namespace CompoundPatterns
 {
-    class Flock : IQuackable
+    class Flock : Quackable
 
     {
-        private IList<IQuackable> _quackers;
+        private readonly IList<Quackable> _quackers;
 
-        public Flock(IList<IQuackable> quackers)
+        public Flock(IList<Quackable> quackers)
         {
             _quackers = quackers;
         }
 
-        public void Quack()
+        internal override void Quack()
         {
             _quackers.ToList().ForEach(quacker => quacker.Quack());
         }

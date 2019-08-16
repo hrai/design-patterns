@@ -2,9 +2,9 @@
 {
     internal abstract class AbstractDuckFactory
     {
-        internal abstract IQuackable CreateMallardDuck();
-        internal abstract IQuackable CreateRedheadDuck();
-        internal abstract IQuackable CreateDuckCall();
-        internal abstract IQuackable CreateRubberDuck();
+        internal abstract Quackable CreateMallardDuck();
+        internal abstract Quackable CreateRedheadDuck();
+        internal abstract Quackable CreateDuckCall();
+        internal abstract Quackable CreateRubberDuck();
     }
 }
